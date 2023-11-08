@@ -1,0 +1,299 @@
+:root {
+  --primary-color: #FF7833;
+  --secondary-color: #31333B;
+  --secondary-color-light: #444856;
+
+  --default-gap: 3rem;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  color: #e7e7e7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  line-height: 1.7;
+  background-image: url(./imagens/bg-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #b8b6b6;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.main-header {
+  flex: 0 0 26rem;
+  background-color:  rgba(49, 51, 59, .8);
+}
+
+.main {
+  background-color: rgba(68, 72, 86, .6);
+  flex: 1 0;
+  padding: 6.5rem;
+  padding-bottom: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.main,
+.main-header {
+  font-size: 1.6rem;
+}
+
+.underline {
+  text-decoration: wavy red underline;
+}
+
+.perfil-img {
+  max-width: 10rem;
+}
+
+.perfil-img img {
+  width: 112px;
+}
+
+.main-nav {
+  text-align: right;
+  padding: 6.5rem 2.4rem 2.4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.header-menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav ul a {
+  display: block;
+  padding: 1.2rem 0;
+  text-decoration: none;
+  transition: padding-right .2s, background-color .4s;
+  background-color: transparent;
+}
+
+.main-nav ul a:hover {
+  background-color: var(--secondary-color-light);
+  padding-right: 1rem;
+}
+
+.main-nav li {
+  border-bottom: 1px solid #7b7b7b;
+  padding: 0.4rem;
+}
+
+.highlight {
+  border-left: 1px solid var(--primary-color);
+  font-size: 1.1em;
+  padding: 0 0 0 2em;
+  margin-bottom: 2.2em;
+}
+
+article {
+  padding: 1em 0;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.card {
+  max-width: 740px;
+  background-color: var(--secondary-color);
+  padding: 0;
+}
+
+.card_content {
+  padding: 1em;
+}
+
+.card_tittle {
+  font-size: 1.75em;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: var(--default-gap);
+  padding: 1.5rem 0;
+  justify-content: space-between;
+}
+
+.row .row {
+  padding: 0;
+}
+
+.row > * {
+  /*flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;*/
+  flex: 1 0 0%;
+}
+
+.alternate {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.alternate li:not(:last-child) {
+  border-bottom: 2px solid #7b7b7b;
+  padding: 0;
+}
+
+.roman {
+  list-style-type: lower-roman;
+}
+
+.list-emoji {
+  list-style-type: "\1F642";
+}
+
+input,
+label,
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: auto;
+  margin: 0 .5rem;
+}
+
+input,
+textarea,
+select {
+  background-color: #ccc;
+  padding: 1.2rem;
+  border-radius: 5px;
+  margin-bottom: 1.6rem;
+  border: 0;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  border: 2px solid #31333B;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+}
+
+.btn + .btn {
+  margin-left: 2rem;
+}
+
+.btn:hover, btn:focus {
+  background-color: var(--secondary-color-light);
+}
+
+.form-quiz {
+  width: calc(50% - var(--default-gap) / 2);
+}
+
+.btn-stroke {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.btn-stroke:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-big {
+  font-size: 2rem;
+}
+
+.btn-full {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-full + .btn-full {
+  margin-left: 0;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td:last-child,
+.table th:last-child {
+  text-align: right;
+
+}
+
+.table td,
+.table th {
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 1.6rem;
+}
+
+.table th {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child) {
+  border-right: 2px solid var(--secondary-color);
+}
+
+.link-icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #ccc;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 3rem;
+  margin-left: 0.5rem;
+}
+
+.redes {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.link-icon:hover {
+  fill: var(--primary-color);
+}
+
+.redes:hover {
+  color: var(--primary-color);
+}
